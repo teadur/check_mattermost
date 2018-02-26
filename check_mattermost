@@ -18,8 +18,8 @@
 #                          patch version tags, but may cause false warnings,
 #                          as patch versions are not always properly included
 #                          in Mattermost release version strings.
-#   -h / --help            Display help
-#   -V / --version         Display version
+#   -h / --help            Display help.
+#   -V / --version         Display version.
 # Examples:
 #   check_mattermost -u https://mattermost.example.com
 #------------------------------------------------------------------------------
@@ -78,8 +78,8 @@ print_usage() {
   printf "                         patch version tags, but may cause false warnings,\n"
   printf "                         as patch versions are not always properly included\n"
   printf "                         in Mattermost release version strings.\n"
-  printf "  -h / --help            Display help\n"
-  printf "  -V / --version         Display version\n"
+  printf "  -h / --help            Display help.\n"
+  printf "  -V / --version         Display version.\n"
 }
 
 #------------------------------------------------------------------------------
