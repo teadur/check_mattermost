@@ -1,0 +1,14 @@
+language: sh
+
+before_script:
+  - sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu/ trusty-backports restricted main universe"
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq shellcheck
+
+script:
+  - shellcheck --shell=sh check_mattermost
+  - sh check_php -V
+  - sh check_php --version
+  - sh check_php -h
+  - sh check_php --help
+
