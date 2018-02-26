@@ -57,7 +57,7 @@ apply Service "mattermost-version" {
   display_name = "Mattermost version"
   notes = "Checks Mattermost version for available updates."
 
-  // Service variables from php definition.
+  // Service variables from host definition.
   vars.mattermost_url = host.vars.mattermost_url
   if ( host.vars.mattermost_patch ) {
     vars.mattermost_patch = host.vars.mattermost_patch
