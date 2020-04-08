@@ -119,9 +119,9 @@ print_version() {
 #------------------------------------------------------------------------------
 get_mattermost_version() {
   if command -v curl >/dev/null 2>&1; then
-    m_version="$(curl -i $MATTERMOST_URL 2>/dev/null | grep 'X-Version-Id' | grep -oE '([0-9]{1,}\.)+[0-9]{1,}')"
+    m_version="$(curl -i $MATTERMOST_URL 2>/dev/null | grep 'X-Version-Id' | grep -oE '(([0-9]{1,2}\.){2}.[0-9]{1,2})')"
   elif command -v wget >/dev/null 2>&1; then
-    m_version="$(wget -qS $MATTERMOST_URL 2>&1 | grep 'X-Version-Id' | grep -oE '([0-9]{1,}\.)+[0-9]{1,}')"
+    m_version="$(wget -qS $MATTERMOST_URL 2>&1 | grep 'X-Version-Id' | grep -oE '(([0-9]{1,2}\.){2}.[0-9]{1,2})')"
   fi
   echo "$m_version"
 }
